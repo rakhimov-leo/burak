@@ -1,6 +1,6 @@
 console.log("_________________TRAIN AREA________________");
 
-//                              TASK H:
+//                            TASK H:
 
 /*
 shunday function tuzing, u integerlardan
@@ -10,6 +10,12 @@ shunday function tuzing, u integerlardan
 
 MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 */
+
+function getPositive(array: number[]): string {
+  return array.filter((num) => num > 0).join("");
+}
+
+console.log(getPositive([5, -6, 6, -8]));
 
 //                              TASK G:
 
@@ -26,4 +32,4 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 //   return array.indexOf(max);
 // }
 
-// console.log(getHighestIndex([5, 21, 12, 21, 8]));
+// console.log(getHighestIndex([5, 2, 12, 21, 8]));
