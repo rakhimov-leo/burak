@@ -1,1 +1,2 @@
-console.log("burak");
+import dotenv from "dotenv";
+dotenv.config();
