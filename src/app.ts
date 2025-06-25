@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import router from "./router";
+import routerAdmin from "./routerAdmin";
 
 /** 1-ENTRANCE **/
 
@@ -19,6 +20,8 @@ app.set("view engine", "ejs");
 
 /** 4-ROUTERS **/
 
-app.use("/", router);
+app.use("/admin", routerAdmin); //Middleware Design Pattern & SPA-(EJS)
+//single page applacation
+app.use("/", router); //SPA:REACT
 
 export default app;
