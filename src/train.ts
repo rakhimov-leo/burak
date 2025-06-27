@@ -1,5 +1,14 @@
 console.log("_________________TRAIN AREA________________");
 
+/* Project Standards:
+- Logging Standards
+- Naming Standards
+function, method, variable => CAMEL
+class => PASCAL
+folder => KEBAB
+css => SNAKE
+*/
+
 //                            H2-TASK:
 /*
 Shunday function tuzing, unga string 
@@ -44,7 +53,8 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
 // MASALAN: getHighestIndex([5, 21, 12, 21 ,8]); return qiladi 1 sonini
 // Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
-// Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi va bizga uning indeksi 1 qaytadi.
+// Va bu 21 soni arrayning tarkibidagi birinchi eng
+// katta son hisobladi va bizga uning indeksi 1 qaytadi.
 
 // function getHighestIndex(array: number[]): number {
 //   const max = Math.max(...array);
