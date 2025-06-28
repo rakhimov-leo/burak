@@ -16,14 +16,14 @@ const memberSchema = new Schema(
       enum: MemberStatus,
       default: MemberStatus.ACTIVE,
     },
-    MemberNick: {
+    memberNick: {
       type: String,
-      index: { unique: true, sparse: true },
+      index: { unique: true },
       required: true,
     },
     memberPhone: {
       type: String,
-      index: { unique: true, sprse: true },
+      index: { unique: true },
       required: true,
     },
 
