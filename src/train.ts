@@ -1,5 +1,38 @@
 console.log("_________________TRAIN AREA________________");
 
+//                           TASK-I:
+/*
+Shunday function tuzing, u parametrdagi 
+array ichida eng ko'p
+takrorlangan raqamni topib qaytarsin.
+
+MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4
+
+Yuqoridag misolda argument sifatida kiritilayotgan array 
+tarkibida 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
+*/
+
+function majorityElement(array: number[]): number {
+  const countMap: Record<number, number> = {};
+
+  for (const num of array) {
+    countMap[num] = (countMap[num] || 0) + 1;
+  }
+
+  let maxCount = 0;
+  let majority = array[0];
+
+  for (const key in countMap) {
+    if (countMap[key] > maxCount) {
+      maxCount = countMap[key];
+      majority = Number(key);
+    }
+  }
+
+  return majority;
+}
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 /* Project Standards:
 - Logging Standards
 - Naming Standards
@@ -19,13 +52,13 @@ return qilsin
 
 MASALAN: getDigits("m14i1t") return qiladi "141"
 */
-function getDigits(a: string): string {
-  return a
-    .split("")
-    .filter((char) => char >= "0" && char <= "9")
-    .join("");
-}
-console.log(getDigits("m1vds2wi1t"));
+// function getDigits(a: string): string {
+//   return a
+//     .split("")
+//     .filter((char) => char >= "0" && char <= "9")
+//     .join("");
+// }
+// console.log(getDigits("m1vds2wi1t"));
 
 //                            TASK H:
 
