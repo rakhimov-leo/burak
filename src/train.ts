@@ -7,6 +7,7 @@ function, method, variable => CAMEL
 class => PASCAL
 folder => KEBAB
 css => SNAKE
+-Error handling
 */
 
 //                            H2-TASK:
