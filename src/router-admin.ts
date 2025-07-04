@@ -13,7 +13,7 @@ routerAdmin
   .get("/signup", restaurantController.getSignUp)
   .post("/signup", restaurantController.processSignup);
 
-// routerAdmin.get("/check-me", restaurantController.checkAuthSession);
+routerAdmin.get("/check-me", restaurantController.checkAuthSession);
 //** Product */
 
 //** User */
