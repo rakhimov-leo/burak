@@ -1,6 +1,6 @@
 console.log("_________________TRAIN AREA________________");
 
-// TASK J:
+//                       TASK J:
 /*
 Shunday function tuzing, u string qabul qilsin.
 Va string ichidagi eng uzun so'zni qaytarsin.
