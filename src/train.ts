@@ -1,5 +1,30 @@
 console.log("_________________TRAIN AREA________________");
 
+// TASK J:
+/*
+Shunday function tuzing, u string qabul qilsin.
+Va string ichidagi eng uzun so'zni qaytarsin.
+
+MASALAN: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
+
+Yuqoridagi text tarkibida 'Uzbekistan'
+eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
+*/
+
+function findLongestWord(str: string): string {
+  const words = str.split(" ");
+  let longest = "";
+
+  for (const word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+
+  return longest;
+}
+console.log(findLongestWord("I came from Uzbekistan!"));
+
 //                           TASK-I:
 /*
 Shunday function tuzing, u parametrdagi 
@@ -11,7 +36,7 @@ MASALAN: majorityElement([1, 2, 3, 4, 5, 4, 3, 4]); return 4
 Yuqoridag misolda argument sifatida kiritilayotgan array 
 tarkibida 4 soni ko'p takrorlanganligi uchun 4'ni return qilmoqda.
 */
-
+/*
 function majorityElement(array: number[]): number {
   const countMap: Record<number, number> = {};
 
@@ -33,6 +58,8 @@ function majorityElement(array: number[]): number {
 }
 
 console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+*/
 /* Project Standards:
 - Logging Standards
 - Naming Standards
