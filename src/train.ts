@@ -1,5 +1,28 @@
 console.log("_________________TRAIN AREA________________");
 
+//                            TASK K:
+/*
+
+Shunday function yozing, u string qabul 
+qilsin va string ichidagi unli harflar
+ sonini qaytarsin.
+MASALAN: countVowels("string") return 1;
+*/
+
+function countVowels(str: string): number {
+  const letters = str.split("");
+  const vowels = "aeiouAEIOU";
+  let count = 0;
+  for (const letter of letters) {
+    if (vowels.includes(letter)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countVowels("I came from Uzbekistan!"));
 //                       TASK J:
 /*
 Shunday function tuzing, u string qabul qilsin.
@@ -10,6 +33,8 @@ MASALAN: findLongestWord("I came from Uzbekistan!"); return "Uzbekistan!"
 Yuqoridagi text tarkibida 'Uzbekistan'
 eng uzun so'z bo'lganligi uchun 'Uzbekistan'ni qaytarmoqda
 */
+
+/*
 
 function findLongestWord(str: string): string {
   const words = str.split(" ");
@@ -24,6 +49,8 @@ function findLongestWord(str: string): string {
   return longest;
 }
 console.log(findLongestWord("I came from Uzbekistan!"));
+
+*/
 
 //                           TASK-I:
 /*
