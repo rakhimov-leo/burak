@@ -1,5 +1,22 @@
 console.log("_________________TRAIN AREA________________");
 
+//                           TASK L:
+/* 
+Shunday function yozing, 
+u string qabul qilsin va string
+ ichidagi hamma sozlarni chappasiga
+  yozib va sozlar ketma-ketligini 
+  buzmasdan stringni qaytarsin.
+MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
+*/
+
+function reverseSentence(sentence: string): string {
+  const words = sentence.split(" ");
+  const reversedWords = words.map((word) => word.split("").reverse().join(""));
+  return reversedWords.join(" ");
+}
+console.log(reverseSentence("we like coding!"));
+
 //                            TASK K:
 /*
 
@@ -9,6 +26,7 @@ qilsin va string ichidagi unli harflar
 MASALAN: countVowels("string") return 1;
 */
 
+/*
 function countVowels(str: string): number {
   const letters = str.split("");
   const vowels = "aeiouAEIOU";
@@ -23,6 +41,9 @@ function countVowels(str: string): number {
 }
 
 console.log(countVowels("I came from Uzbekistan!"));
+
+*/
+
 //                       TASK J:
 /*
 Shunday function tuzing, u string qabul qilsin.
