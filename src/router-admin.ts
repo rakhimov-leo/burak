@@ -32,7 +32,7 @@ routerAdmin.get(
 routerAdmin.post(
   "/product/create",
   restaurantController.verifyRestaurant,
-  makeUploader("products").array("productImages", 5), /// shu yerda xatolik bulyapti
+  makeUploader("products").array("productImages", 5),
   productController.createNewProduct
 );
 routerAdmin.post(

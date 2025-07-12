@@ -2,11 +2,10 @@ import express from "express";
 import multer from "multer";
 const router = express.Router();
 import restaurantController from "./controllers/restaurant.controller";
-// import memberController from "./controllers/member.controller";
+import memberController from "./controllers/member.controller";
 
 // router.post("/login", memberController.login);
 // router.post("/signup", memberController.signup);
-
 // export default router;
 
 const upload = multer({ dest: "uploads/" });
