@@ -15,6 +15,7 @@ restaurantController.goHome = (req: Request, res: Response) => {
     // post.ning turlari: send | json | redirect | end | render
   } catch (err) {
     console.log("Error, goHome:", err);
+    res.redirect("/admin");
   }
 };
 
