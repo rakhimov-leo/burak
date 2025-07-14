@@ -1,5 +1,25 @@
 console.log("_________________TRAIN AREA________________");
 
+//                        TASK N:
+/*
+Shunday function yozing, u string 
+qabul qilsin va string palindrom yani 
+togri oqilganda ham, orqasidan oqilganda
+ ham bir hil oqiladigan soz ekanligini aniqlab
+  boolean qiymat qaytarsin.
+
+MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
+*/
+function palindromCheck(str: string): boolean {
+  const reversed = str.split("").reverse().join("");
+  return str === reversed;
+}
+
+console.log(palindromCheck("dad"));
+console.log(palindromCheck("mom"));
+console.log(palindromCheck("eye"));
+console.log(palindromCheck("son"));
+
 //                         TASK M:
 
 /*
@@ -16,6 +36,7 @@ return [{number: 1, square: 1},
 
 */
 
+/*
 function getSquareNumbers(arr: number[]): { number: number; square: number }[] {
   return arr.map((num) => {
     return {
@@ -26,6 +47,8 @@ function getSquareNumbers(arr: number[]): { number: number; square: number }[] {
 }
 
 console.log(getSquareNumbers([3, 4, 6]));
+
+*/
 
 //                           TASK L:
 /* 
