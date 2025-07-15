@@ -170,6 +170,33 @@ css => SNAKE
 -Error handling
 */
 
+/*
+ * Request:
+ Traditional Api
+ Rest Api
+ GraphQL Api
+ ......
+
+
+ * Frontend Development:
+ Traditional FD  => SSR  => EJS
+ Modern FD       => SPA  => REACT
+
+ * Cokies:
+ request join
+ self destroy
+
+
+ * Validation:
+ Frontend validition
+ Backend validition
+ Database validation
+
+
+*/
+
+
+
 //                            H2-TASK:
 /*
 Shunday function tuzing, unga string 
