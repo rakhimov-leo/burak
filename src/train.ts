@@ -1,5 +1,66 @@
 console.log("_________________TRAIN AREA________________");
 
+//                        TASK O:
+/*
+
+Shunday function yozing va u
+ har xil qiymatlardan iborat 
+ array qabul qilsin.
+Va array ichidagi sonlar yig'indisini
+ hisoblab chiqgan javobni qaytarsin
+
+MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]); return 45
+
+Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 hamda 35
+Qolganlari nested bo'lib yoki type'lari number emas.
+*/
+function calculateSumOfNumbers(arr: any[]): number {
+  let sum = 0;
+  arr.forEach((item) => {
+    if (typeof item === "number") {
+      sum += item;
+    }
+  });
+  return sum;
+}
+
+const result = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
+console.log(result);
+/* Project Standards:
+- Logging Standards
+- Naming Standards
+function, method, variable => CAMEL
+class => PASCAL
+folder => KEBAB
+css => SNAKE
+-Error handling
+*/
+
+/*
+ * Request:
+ Traditional Api
+ Rest Api
+ GraphQL Api
+ ......
+
+
+ * Frontend Development:
+ Traditional FD  => SSR  => EJS
+ Modern FD       => SPA  => REACT
+
+ * Cokies:
+ request join
+ self destroy
+
+
+ * Validation:
+ Frontend validition
+ Backend validition
+ Database validation
+
+
+*/
+
 //                        TASK N:
 /*
 Shunday function yozing, u string 
@@ -10,6 +71,7 @@ togri oqilganda ham, orqasidan oqilganda
 
 MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
 */
+/*
 function palindromCheck(str: string): boolean {
   const reversed = str.split("").reverse().join("");
   return str === reversed;
@@ -19,7 +81,7 @@ console.log(palindromCheck("dad"));
 console.log(palindromCheck("mom"));
 console.log(palindromCheck("eye"));
 console.log(palindromCheck("son"));
-
+*/
 //                         TASK M:
 
 /*
@@ -159,41 +221,6 @@ function majorityElement(array: number[]): number {
 
 console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 
-*/
-/* Project Standards:
-- Logging Standards
-- Naming Standards
-function, method, variable => CAMEL
-class => PASCAL
-folder => KEBAB
-css => SNAKE
--Error handling
-*/
-
-/*
- * Request:
- Traditional Api
- Rest Api
- GraphQL Api
- ......
-
-
- * Frontend Development:
- Traditional FD  => SSR  => EJS
- Modern FD       => SPA  => REACT
-
- * Cokies:
- request join
- self destroy
-
-
- * Validation:
- Frontend validition
- Backend validition
- Database validation
-
-
-*/
 
 
 
