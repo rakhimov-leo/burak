@@ -3,11 +3,9 @@ console.log("Users frontend javascript file");
 $(function () {
   $(".member-status").on("change", function (e) {
     const id = e.target.id;
-    console.log("id:", id);
 
     const memberStatus = $(this).val();
     // const memberStatus = $(`#${id}.member-status`).val();
-    console.log("memberStatus:", memberStatus);
 
     //axios updateChosenUser
     axios
