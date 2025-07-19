@@ -1,5 +1,22 @@
 console.log("_________________TRAIN AREA________________");
 
+//                       TASK P:
+
+/*
+Parametr sifatida yagona
+ object qabul qiladigan 
+ function yozing.
+Qabul qilingan objectni nested 
+array sifatida convert qilib qaytarsin
+
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+
+*/
+function objectToArray(obj: Record<string, any>): [string, any][] {
+  return Object.entries(obj);
+}
+
+console.log(objectToArray({ a: 10, b: 20 }));
 //                        TASK O:
 /*
 
@@ -15,6 +32,7 @@ Yuqoridagi misolda array tarkibida faqatgina ikkita yagona son mavjud bular 10 h
 Qolganlari nested bo'lib yoki type'lari number emas.
 */
 
+/*
 function calculateSumOfNumbers(arr: any[]): number {
   let sum = 0;
   arr.forEach((item) => {
@@ -27,6 +45,9 @@ function calculateSumOfNumbers(arr: any[]): number {
 
 const result = calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]);
 console.log(result);
+
+
+*/
 
 /* Project Standards:
 - Logging Standards
