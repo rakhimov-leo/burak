@@ -21,7 +21,7 @@ function calculate(expression: string): number {
 }
 
 // Misol:
-console.log(calculate("1 + 3")); // 4
+console.log(calculate("1 + 3"));
 
 //                            TASK Q:
 /*
@@ -46,8 +46,8 @@ function hasProperty(obj: Record<string, any>, key: string): boolean {
   return Object.prototype.hasOwnProperty.call(obj, key);
 }
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model")); // true
-console.log(hasProperty({ name: "BMW", model: "M3" }, "year")); // false
+console.log(hasProperty({ name: "BMW", model: "M3" }, "model")); 
+console.log(hasProperty({ name: "BMW", model: "M3" }, "year")); 
 */
 //                       TASK P:
 
