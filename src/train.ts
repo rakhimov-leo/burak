@@ -20,7 +20,6 @@ function calculate(expression: string): number {
   return num1 + num2;
 }
 
-// Misol:
 console.log(calculate("1 + 3"));
 
 //                            TASK Q:
