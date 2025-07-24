@@ -13,6 +13,15 @@ MASALAN: calculate("1 + 3"); return 4;
 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
 */
 
+function calculate(expression: string): number {
+  const parts = expression.split("+"); 
+  const num1 = parseInt(parts[0].trim());
+  const num2 = parseInt(parts[1].trim());
+  return num1 + num2;
+}
+
+console.log(calculate("1 + 3"));
+
 //                            TASK Q:
 /*
 Shunday function yozing, 
