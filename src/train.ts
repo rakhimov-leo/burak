@@ -1,5 +1,32 @@
 console.log("_________________TRAIN AREA________________");
 
+//                       TASK-S:
+/*
+Shunday function yozing, 
+u numberlardan tashkil topgan array 
+qabul qilsin va osha numberlar 
+orasidagi tushib qolgan sonni topib
+ uni return qilsin
+MASALAN: missingNumber([3, 0, 1]) return 2
+
+*/
+function missingNumber(arr: number[]): number | null {
+  const sorted = arr.sort((a, b) => a - b);
+
+  for (let i = 1; i < sorted.length; i++) {
+    const prev = sorted[i - 1];
+    const curr = sorted[i];
+
+    if (curr - prev > 1) {
+      return prev + 1;
+    }
+  }
+
+  return null;
+}
+
+console.log(missingNumber([10, 12, 9]));
+
 //                         TASK R
 /*
 Shunday function yozing, 
@@ -12,7 +39,7 @@ hisoblab, number holatida qaytarsin
 MASALAN: calculate("1 + 3"); return 4;
 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
 */
-
+/*
 function calculate(expression: string): number {
   const parts = expression.split("+"); 
   const num1 = parseInt(parts[0].trim());
@@ -21,6 +48,7 @@ function calculate(expression: string): number {
 }
 
 console.log(calculate("1 + 3"));
+*/
 
 //                            TASK Q:
 /*
