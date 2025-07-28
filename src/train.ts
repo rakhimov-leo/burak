@@ -1,5 +1,27 @@
 console.log("_________________TRAIN AREA________________");
 
+//                        TASK T
+
+/*
+Shunday function tuzing, u sonlardan 
+tashkil topgan 2'ta array 
+qabul qilsin.
+Va ikkala arraydagi sonlarni 
+tartiblab bir arrayda qaytarsin.
+
+MASALAN: mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]); 
+return [0, 3, 4, 4, 6, 30, 31];
+
+Yuqoridagi misolda, ikkala arrayni 
+birlashtirib, tartib raqam bo'yicha tartiblab qaytarmoqda.
+*/
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+  const mergedArray = [...arr1, ...arr2];
+  return mergedArray.sort((a, b) => a - b);
+}
+
+console.log(mergeSortedArrays([2, 3, 5, 25], [4, 10, 20]));
+
 //                       TASK-S:
 /*
 Shunday function yozing, 
@@ -10,6 +32,7 @@ orasidagi tushib qolgan sonni topib
 MASALAN: missingNumber([3, 0, 1]) return 2
 
 */
+/*
 function missingNumber(arr: number[]): number | null {
   const sorted = arr.sort((a, b) => a - b);
 
@@ -26,6 +49,7 @@ function missingNumber(arr: number[]): number | null {
 }
 
 console.log(missingNumber([10, 12, 9]));
+*/
 
 //                         TASK R
 /*
