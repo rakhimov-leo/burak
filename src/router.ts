@@ -4,11 +4,16 @@ const router = express.Router();
 import restaurantController from "./controllers/restaurant.controller";
 import memberController from "./controllers/member.controller";
 
-router.post("/login", memberController.login);
-router.post("/signup", memberController.signup);
+/** Member **/
+router.post("/member/login", memberController.login);
+router.post("/member/signup", memberController.signup);
+router.get("/member/detail", memberController.verifyAuth);
 
 const upload = multer({ dest: "uploads/" });
 
+/** Product **/
+
+/** Order **/
 // SIGNUP ROUTE — Multer middleware qo‘shiladi shu yerda:
 router.post(
   "/admin/signup",
