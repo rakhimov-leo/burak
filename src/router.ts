@@ -7,6 +7,11 @@ import memberController from "./controllers/member.controller";
 /** Member **/
 router.post("/member/login", memberController.login);
 router.post("/member/signup", memberController.signup);
+router.post(
+  "/member/logout",
+  memberController.verifyAuth,
+  memberController.logout
+);
 router.get("/member/detail", memberController.verifyAuth);
 
 const upload = multer({ dest: "uploads/" });
@@ -14,6 +19,7 @@ const upload = multer({ dest: "uploads/" });
 /** Product **/
 
 /** Order **/
+
 // SIGNUP ROUTE — Multer middleware qo‘shiladi shu yerda:
 router.post(
   "/admin/signup",
