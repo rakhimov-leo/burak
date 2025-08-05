@@ -1,5 +1,36 @@
 console.log("_________________TRAIN AREA________________");
 
+//                  TASK W
+
+/*
+Shunday function yozing,
+ u o'ziga parametr sifatida
+yagona array va number qabul 
+qilsin. Siz tuzgan function
+arrayni numberda berilgan 
+uzunlikda kesib bo'laklarga
+ajratgan holatida qaytarsin.
+MASALAN: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+
+Yuqoridagi namunada berilayotgan
+ array ikkinchi parametr 3'ga
+asoslanib 3 bo'lakga bo'linib 
+qaytmoqda. Qolgani esa o'z holati qolyapti
+*/
+
+function chunkArray<T>(arr: T[], size: number): T[][] {
+  const result: T[][] = [];
+
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+
+  return result;
+}
+
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 3));
+
 //                  TASK V
 /*
 Shunday function yozing,
@@ -16,6 +47,7 @@ qatnashgan harflar necha marotaba takrorlangini bilan
 object sifatida qaytarilmoqda.
 
 */
+/*
 function countChars(str: string): { [key: string]: number } {
   const result: { [key: string]: number } = {};
 
@@ -32,6 +64,7 @@ function countChars(str: string): { [key: string]: number } {
 
 console.log(countChars("welcome"));
 
+*/
 //                      TASK U
 
 /*
@@ -80,12 +113,12 @@ return [0, 3, 4, 4, 6, 30, 31];
 Yuqoridagi misolda, ikkala arrayni 
 birlashtirib, tartib raqam bo'yicha tartiblab qaytarmoqda.
 */
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-  const mergedArray = [...arr1, ...arr2];
-  return mergedArray.sort((a, b) => a - b);
-}
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//   const mergedArray = [...arr1, ...arr2];
+//   return mergedArray.sort((a, b) => a - b);
+// }
 
-console.log(mergeSortedArrays([2, 3, 5, 25], [4, 10, 20]));
+// console.log(mergeSortedArrays([2, 3, 5, 25], [4, 10, 20]));
 
 //                       TASK-S:
 /*
