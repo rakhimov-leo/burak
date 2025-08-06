@@ -3,6 +3,7 @@ import multer from "multer";
 const router = express.Router();
 import restaurantController from "./controllers/restaurant.controller";
 import memberController from "./controllers/member.controller";
+import uploader from "./libs/utils/uploader";
 
 /** Member **/
 router.post("/member/login", memberController.login);
@@ -19,6 +20,13 @@ router.get(
 );
 
 const upload = multer({ dest: "uploads/" });
+
+router.post(
+  "/member/update",
+  memberController.verifyAuth,
+  uploader("members").single("memberImage"),
+  memberController.updateMember
+);
 
 /** Product **/
 
