@@ -1,5 +1,60 @@
 console.log("_________________TRAIN AREA________________");
 
+//                          TASK X
+/*
+Shunday function yozing, 
+uni object va string parametrlari
+ bo'lsin.
+Bu function, birinchi object
+ parametri tarkibida, kalit
+  sifatida ikkinchi string parametri
+necha marotaba takrorlanganlini
+ sanab qaytarsin.
+
+Eslatma => Nested object'lar ham sanalsin
+
+MASALAN: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2
+
+Yuqoridagi misolda, birinchi argument object, ikkinchi argument 'model'.
+Funktsiya, shu ikkinchi argument 'model', birinchi argument object
+tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
+*/
+
+function countOccurrences(
+  obj: Record<string, any>,
+  keyToCount: string
+): number {
+  let count = 0;
+
+  function search(current: any) {
+    if (typeof current === "object" && current !== null) {
+      for (const key in current) {
+        if (key === keyToCount) {
+          count++;
+        }
+
+        const value = current[key];
+        if (typeof value === "object" && value !== null) {
+          search(value); // Rekursiv chaqiriq
+        }
+      }
+    }
+  }
+
+  search(obj);
+  return count;
+}
+
+const data = {
+  model: "Bugatti",
+  steer: {
+    model: "HANKOOK",
+    size: 30,
+  },
+};
+
+console.log(countOccurrences(data, "model"));
+
 //                  TASK W
 
 /*
@@ -19,17 +74,17 @@ asoslanib 3 bo'lakga bo'linib
 qaytmoqda. Qolgani esa o'z holati qolyapti
 */
 
-function chunkArray<T>(arr: T[], size: number): T[][] {
-  const result: T[][] = [];
+// function chunkArray<T>(arr: T[], size: number): T[][] {
+//   const result: T[][] = [];
 
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
-  }
+//   for (let i = 0; i < arr.length; i += size) {
+//     result.push(arr.slice(i, i + size));
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 3));
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], 3));
 
 //                  TASK V
 /*
