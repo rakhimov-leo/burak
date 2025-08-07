@@ -35,7 +35,7 @@ function countOccurrences(
 
         const value = current[key];
         if (typeof value === "object" && value !== null) {
-          search(value); // Rekursiv chaqiriq
+          search(value);
         }
       }
     }
