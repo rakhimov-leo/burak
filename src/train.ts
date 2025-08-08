@@ -1,5 +1,34 @@
 console.log("_________________TRAIN AREA________________");
 
+//                      TASK Y
+
+/*
+Shunday function yozing,
+ uni 2'ta array parametri bo'lsin.
+Bu function ikkala arrayda 
+ham ishtirok etgan bir xil
+qiymatlarni yagona arrayga
+ joylab qaytarsin.
+
+MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+Yuqoridagi misolda, argument 
+sifatida berilayotgan array'larda
+o'xshash sonlar mavjud. 
+Function'ning vazifasi esa ana shu
+ikkala array'da ishtirok etgan o'xshash 
+sonlarni yagona arrayga
+joylab return qilmoqda.
+*/
+
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+  const intersection: number[] = arr1.filter((value) => arr2.includes(value));
+  const unique: number[] = [...new Set(intersection)];
+  return unique;
+}
+
+console.log(findIntersection([1, 2, 3, 5, 7], [3, 2, 0, 6, 7]));
+
 //                          TASK X
 /*
 Shunday function yozing, 
