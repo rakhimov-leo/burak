@@ -5,7 +5,7 @@ import {
   ProductInquiry,
   ProductUpdateInput,
 } from "../libs/types/product";
-import ProductModel from "../schema/product.model";
+import ProductModel from "../schema/Product.model";
 import { Message } from "../libs/Errors";
 import { shapeInoMongooseObjectId } from "../libs/config";
 import { ProductStatus } from "../libs/enums/product.enum";
