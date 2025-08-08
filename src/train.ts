@@ -20,40 +20,40 @@ Funktsiya, shu ikkinchi argument 'model', birinchi argument object
 tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
 */
 
-function countOccurrences(
-  obj: Record<string, any>,
-  keyToCount: string
-): number {
-  let count = 0;
+// function countOccurrences(
+//   obj: Record<string, any>,
+//   keyToCount: string
+// ): number {
+//   let count = 0;
 
-  function search(current: any) {
-    if (typeof current === "object" && current !== null) {
-      for (const key in current) {
-        if (key === keyToCount) {
-          count++;
-        }
+//   function search(current: any) {
+//     if (typeof current === "object" && current !== null) {
+//       for (const key in current) {
+//         if (key === keyToCount) {
+//           count++;
+//         }
 
-        const value = current[key];
-        if (typeof value === "object" && value !== null) {
-          search(value);
-        }
-      }
-    }
-  }
+//         const value = current[key];
+//         if (typeof value === "object" && value !== null) {
+//           search(value);
+//         }
+//       }
+//     }
+//   }
 
-  search(obj);
-  return count;
-}
+//   search(obj);
+//   return count;
+// }
 
-const data = {
-  model: "Bugatti",
-  steer: {
-    model: "HANKOOK",
-    size: 30,
-  },
-};
+// const data = {
+//   model: "Bugatti",
+//   steer: {
+//     model: "HANKOOK",
+//     size: 30,
+//   },
+// };
 
-console.log(countOccurrences(data, "model"));
+// console.log(countOccurrences(data, "model"));
 
 //                  TASK W
 
