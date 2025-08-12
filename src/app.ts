@@ -1,10 +1,10 @@
-import express from "express";
-import path from "path";
-import router from "./router";
-import routerAdmin from "./router-admin";
-import morgan from "morgan";
-import cookieParser from "cookie-parser";
-import { MORGAN_FORMAT } from "./libs/config";
+import express from "express"; //server yaratish uchun framework.
+import path from "path"; //fayl va papka yo‘llarini to‘g‘ri birlashtirish uchun.
+import router from "./router"; //odatiy foydalanuvchi yo‘llari.
+import routerAdmin from "./router-admin"; //admin panel yo‘llari.
+import morgan from "morgan"; //HTTP log yozish kutubxonasi
+import cookieParser from "cookie-parser"; //cookie’larni o‘qish.
+import { MORGAN_FORMAT } from "./libs/config"; // log formatini belgilovchi sozlama.
 
 import session from "express-session";
 import ConnectMongoDB from "connect-mongodb-session";
@@ -20,8 +20,8 @@ const store = new MongoDBStore({
 
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/uploads", express.static("./uploads"));
-app.use(express.urlencoded({ extended: true }));
+app.use("/uploads", express.static("./uploads")); //Middleware
+app.use(express.urlencoded({ extended: true })); //HTML form ma’lumotlarini o‘qish. Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT));
