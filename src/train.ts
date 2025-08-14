@@ -1,5 +1,32 @@
 console.log("_________________TRAIN AREA________________");
 
+/*
+
+                    TASK Z 
+
+Shunday function yozing. Bu function
+  sonlardan iborat array qabul qilsin.
+  Function'ning vazifasi array tarkibidagi 
+    juft sonlarni topib ularni yig'disini qaytarsin.
+MASALAN: sumEvens([1, 2, 3]); return 2;
+sumEvens([1, 2, 3, 2]); return 4; Yuqoridagi misolda,
+  bizning funktsiya berilayotgan 
+array tarkibidagi sonlar ichidan faqatgina juft 
+bo'lgan sonlarni topib, ularni hisoblab yig'indisini qaytarmoqda.
+*/
+
+function sumEvens(arr: number[]): number {
+  let sum = 0;
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      sum += num;
+    }
+  }
+  return sum;
+}
+
+console.log(sumEvens([1, 2, 3, 2]));
+
 //                      TASK Y
 
 /*
@@ -21,13 +48,13 @@ sonlarni yagona arrayga
 joylab return qilmoqda.
 */
 
-function findIntersection(arr1: number[], arr2: number[]): number[] {
-  const intersection: number[] = arr1.filter((value) => arr2.includes(value));
-  const unique: number[] = [...new Set(intersection)];
-  return unique;
-}
+// function findIntersection(arr1: number[], arr2: number[]): number[] {
+//   const intersection: number[] = arr1.filter((value) => arr2.includes(value));
+//   const unique: number[] = [...new Set(intersection)];
+//   return unique;
+// }
 
-console.log(findIntersection([1, 2, 3, 5, 7], [3, 2, 0, 6, 7]));
+// console.log(findIntersection([1, 2, 3, 5, 7], [3, 2, 0, 6, 7]));
 
 //                          TASK X
 /*
