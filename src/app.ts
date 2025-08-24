@@ -1,3 +1,4 @@
+import cors from "cors";
 import express from "express"; //server yaratish uchun framework.
 import path from "path"; //fayl va papka yo‘llarini to‘g‘ri birlashtirish uchun.
 import router from "./router"; //odatiy foydalanuvchi yo‘llari.
@@ -23,6 +24,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static("./uploads")); //Middleware
 app.use(express.urlencoded({ extended: true })); //HTML form ma’lumotlarini o‘qish. Middleware
 app.use(express.json());
+app.use(
+  cors({
+    credentials: true,
+    origin: true,
+  })
+);
 app.use(cookieParser());
 app.use(morgan(MORGAN_FORMAT));
 
