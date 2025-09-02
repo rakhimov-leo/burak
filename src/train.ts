@@ -1,4 +1,29 @@
 console.log("_________________TRAIN AREA________________");
+
+/*
+TASK-ZF:
+
+Shunday function yozing, uni
+ string parametri bolsin.String ichidagi
+  har bir sozni bosh harflarini katta harf 
+  qilib qaytarsin lekin 1 yoki 2 harfdan 
+  iborat sozlarni esa oz holicha qoldirsin.
+MASALAN: capitalizeWords('name should be a string') return 'Name Should be a String'
+*/
+function capitalizeWords(str: string): string {
+  return str
+    .split(" ")
+    .map((word: string) => {
+      if (word.length > 2) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      }
+      return word;
+    })
+    .join(" ");
+}
+
+console.log(capitalizeWords("hello world to our world!"));
+
 /*
                           TASK ZE
 
@@ -18,17 +43,17 @@ qaytarmoqda.
 
 */
 
-function removeDuplicate(str: string): string {
-  let result = "";
-  for (let char of str) {
-    if (!result.includes(char)) {
-      result += char;
-    }
-  }
-  return result;
-}
+// function removeDuplicate(str: string): string {
+//   let result = "";
+//   for (let char of str) {
+//     if (!result.includes(char)) {
+//       result += char;
+//     }
+//   }
+//   return result;
+// }
 
-console.log(removeDuplicate("aabbccdde"));
+// console.log(removeDuplicate("aabbccdde"));
 //                            TASK ZD
 /* 
 Shunday function yozing. Bu function
