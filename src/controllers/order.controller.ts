@@ -15,7 +15,7 @@ orderController.createOrder = async (req: ExtendedRequest, res: Response) => {
     console.log("createOrder");
     const result = await orderService.createOrder(req.member, req.body);
 
-    res.status(HttpCode.CREATED).json({ result });
+    res.status(HttpCode.CREATED).json(result);
   } catch (err) {
     console.log("Error, createOrder:", err);
     if (err instanceof Errors) res.status(err.code).json(err);
@@ -35,7 +35,7 @@ orderController.getMyOrders = async (req: ExtendedRequest, res: Response) => {
     console.log("inquiry:", inquiry);
     const result = await orderService.getMyOrders(req.member, inquiry);
 
-    res.status(HttpCode.CREATED).json({ result });
+    res.status(HttpCode.CREATED).json(result);
   } catch (err) {
     console.log("Error, getMyOrders:", err);
     if (err instanceof Errors) res.status(err.code).json(err);
