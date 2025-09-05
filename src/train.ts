@@ -1,5 +1,18 @@
 console.log("_________________TRAIN AREA________________");
 
+/*                        TASK-ZG:
+
+Shunday function yozing, u berilgan
+ string parametrni snake casega otkazib qaytarsin. 
+MASALAN: capitalizeWords('name should be a string')
+ return 'name_should_be_a_string'
+*/
+function toSnakeCase(str: string): string {
+  return str.trim().toLowerCase().replace(/\s+/g, "_");
+}
+
+console.log(toSnakeCase("name should be a string"));
+
 /*
 TASK-ZF:
 
