@@ -1,5 +1,29 @@
 console.log("_________________TRAIN AREA________________");
 
+//                       TASK-ZH:
+/*
+Shunday function yozing, u 
+berilgan array parametrni ichidagi 
+eng katta raqamgacha tushib qolgan 
+raqamlarni bir arrayda qaytarsin. 
+MASALAN: findDisappearedNumbers([1, 3, 4, 7]) return [2, 5, 6]
+*/
+
+function findDisappearedNumbers(arr: number[]): number[] {
+  const maxNum = Math.max(...arr);
+  const result: number[] = [];
+
+  for (let i = 1; i <= maxNum; i++) {
+    if (!arr.includes(i)) {
+      result.push(i);
+    }
+  }
+
+  return result;
+}
+
+console.log(findDisappearedNumbers([4, 7, 8, 12]));
+
 /*                        TASK-ZG:
 
 Shunday function yozing, u berilgan
@@ -7,11 +31,13 @@ Shunday function yozing, u berilgan
 MASALAN: capitalizeWords('name should be a string')
  return 'name_should_be_a_string'
 */
+/*
 function toSnakeCase(str: string): string {
   return str.trim().toLowerCase().replace(/\s+/g, "_");
 }
 
 console.log(toSnakeCase("name should be a string"));
+*/
 
 /*
 TASK-ZF:
@@ -23,6 +49,7 @@ Shunday function yozing, uni
   iborat sozlarni esa oz holicha qoldirsin.
 MASALAN: capitalizeWords('name should be a string') return 'Name Should be a String'
 */
+/*
 function capitalizeWords(str: string): string {
   return str
     .split(" ")
@@ -35,7 +62,8 @@ function capitalizeWords(str: string): string {
     .join(" ");
 }
 
-console.log(capitalizeWords("hello world to our world!"));
+console.log(capitalizeWords("hello world to our world!")); 
+*/
 
 /*
                           TASK ZE
