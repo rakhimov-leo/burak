@@ -7,7 +7,6 @@ const orderSchema = new Schema(
       type: Number,
       required: true,
     },
-
     orderDelivery: {
       type: Number,
       required: true,
@@ -25,7 +24,7 @@ const orderSchema = new Schema(
       ref: "Member",
     },
   },
-  { timestamps: true, collection: "orders" }
+  { timestamps: true }
 );
 
 export default mongoose.model("Order", orderSchema);
